@@ -60,7 +60,7 @@ list.files('..//Question1/code/', full.names = T, recursive = T) %>% as.list() %
 ```
 
 # Question 2
-##Billionaires  
+## Billionaires  
 
 Just like the previous question this report will need to be reported in a less formal manner, hence this question will not require the use of Texevier. Thus, the output file will be knitted using the rmarkdown.  
 
@@ -69,9 +69,9 @@ First task will be to load the code and the data into the folders of Question 2.
 
 ```
 
-#Question 3
+# Question 3
 
-Tweets
+## Tweets
 
 This question involves the use of the Texevier package and the extra necessary data manipulation to answer the question. The file for the Texevier was formed using the package and the evaluation will be completed in the pdf files.
 ```{r}
