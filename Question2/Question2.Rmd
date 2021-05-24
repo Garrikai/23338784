@@ -3,7 +3,7 @@ title: "Question2"
 output: pdf_document
 ---
 #Load packages and Data
-```{r setup, include=FALSE}
+```{r setup, eval=FALSE, include=FALSE}
 
 rm(list = ls())
 gc()
@@ -18,7 +18,7 @@ list.files('..//Question2/code/', full.names = T, recursive = T) %>% as.list() %
 
 ```
 We note that the data is in a format that makes it challenging to load it, therefore, we resort to creating a function that will then be used to import this csv data in the right format.
-```{r}
+```{r eval=FALSE}
 library(readr)
 tbl <-
     list.files(pattern = "C:/Users/gariz/DataScience/Solution/23338784/Question2/data/Forbes/", pattern = "*.csv", full.names = T)
@@ -38,10 +38,6 @@ lapply(filenames, fread, select = c("names.of", "columns", "I.want")) %>%
 
 ```
  
-#Data wrangling 
-```{r cars}
-summary(cars)
-```
 
 #Plots for FIN24
 
