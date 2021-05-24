@@ -40,13 +40,11 @@ movies %>%
 Next Claim : 
 Disney films may not have the highest grossing numbers, but they've always been the most profitable of all the leading studios.
 ```{r eval=FALSE}
-movies %>%
+claim_one <- movies %>%
   group_by(`Lead Studio`, 'Profitability', `Worldwide Gross`) %>%
   summarise(top_profit = sum(Profitability)) %>%
   
   arrange(desc(Profitability, `Worldwide Gross`))
-
-
 
   
 ```
@@ -64,7 +62,7 @@ between the world wide grossing numbers and audience scores would be near 80%.
 ## Including Plots
 
 ```{r pressure, echo=FALSE}
-plot(pressure)
+claim_one %>% ggplot() + geoms(x = Profitability ,y = Worldwide gross, colour = Rotten tomatoes %))
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
