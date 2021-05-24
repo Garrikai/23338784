@@ -3,7 +3,7 @@ title: "Question1"
 output: pdf_document
 ---
 
-```{r setup, include=FALSE}
+```{r setup, eval=FALSE, include=FALSE}
 knitr::opts_chunk$set(echo = False)
 
 if(!require("tidyverse")) install.packages("tidyverse")
@@ -14,8 +14,7 @@ list.files('..//Question1/code/', full.names = T, recursive = T) %>% as.list() %
 ```
 
 # Data Loading
-```{r}
-
+```{r eval=FALSE}
 pacman::p_load(tidyverse)
 library(tidyverse)
 
@@ -25,27 +24,28 @@ movies <- read_csv("Question1/data/Movies.csv")
 ```
 
 We first take a glimpse of the contents of the dataset using the glimpse(movies) function.
-```{r eval=TRUE}
+```{r eval=FALSE}
 glimpse(movies)
 ```
 
 The next step is to address her theories claim by claim using the movies dataset now included in the folder.  
 
 The first claim made is that Rotten Tomatoes was a great platform and that audience would over rate a movies if it was above 85% in rating. We first have to make sure our data is tidy before we get into wrangling
-```{r}
- movies %>% 
-  filter(`Audience  score %` > 80 & `Rotten Tomatoes %`> 80)
+```{r eval=FALSE}
+movies %>%
+  filter(`Audience  score %` > 80 & `Rotten Tomatoes %` > 80)
 
 ```
 
 Next Claim : 
 Disney films may not have the highest grossing numbers, but they've always been the most profitable of all the leading studios.
-```{r}
+```{r eval=FALSE}
 movies %>%
-  group_by(`Lead Studio`, 'Profitability', `Worldwide Gross`)%>% 
-  summarise(top_profit = sum(Profitability)) %>% 
+  group_by(`Lead Studio`, 'Profitability', `Worldwide Gross`) %>%
+  summarise(top_profit = sum(Profitability)) %>%
+  
   arrange(desc(Profitability, `Worldwide Gross`))
-    
+
 
 
   

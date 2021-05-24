@@ -12,8 +12,8 @@ The Questions will be answered in the three different folders to make it easier 
 #Management of R projects
 The first step taken was to create a folder including the project and inside the folder three folders were created using the preinstalled Texevier package for each question.
 
-```{r}
-CHOSEN_LOCATION <- "C:/Users/gariz/DataScience/")
+```{r eval=FALSE}
+CHOSEN_LOCATION <- "C:/Users/gariz/DataScience/"
 fmxdat::make_project(FilePath = glue::glue("{CHOSEN_LOCATION}Solution/"), 
                      ProjNam = "23338784")
 
@@ -47,8 +47,7 @@ list.files('Question1/code/', full.names = T, recursive = T) %>% as.list() %>% w
 
 Loading in some really crucial data here, and then producing a beautiful plot:
 
-```{r}
-
+```{r eval=FALSE}
 knitr::opts_chunk$set(echo = False)
 
 if(!require("tidyverse")) install.packages("tidyverse")
@@ -71,7 +70,8 @@ First task will be to load the code and the data into the folders of Question 2.
 ```
 
 #Question 3
-##Tweets
+
+Tweets
 
 This question involves the use of the Texevier package and the extra necessary data manipulation to answer the question. The file for the Texevier was formed using the package and the evaluation will be completed in the pdf files.
 ```{r}
